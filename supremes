@@ -1,1 +1,180 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>SUPREMES GOD MODE ULTRA</title> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"> <style> *{margin:0;padding:0;box-sizing:border-box;} body{font-family:'Orbitron',sans-serif;background:black;color:white;overflow-x:hidden;scroll-behavior:smooth;} #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;cursor:none;} /* SECTION STYLING */ .section{padding:100px 20px;text-align:center;position:relative;z-index:1;transition:all 1s;opacity:0;transform:translateY(50px);} .section.visible{opacity:1;transform:translateY(0);} .section h1,h2{margin-bottom:20px;} .section h1{font-size:3rem;text-shadow:0 0 40px red;animation:glow 2s infinite alternate;} .section h2{font-size:2rem;color:red;margin-bottom:10px;} .section p{font-size:1rem;line-height:1.8;} /* BUTTONS */ .btn{margin-top:25px;padding:15px 45px;background:red;color:black;font-weight:900;border:none;border-radius:40px;cursor:pointer;box-shadow:0 0 30px red;transition:0.3s;text-decoration:none;display:inline-block;} .btn:hover{background:darkred;color:white;box-shadow:0 0 50px red;} /* MEMBERS & ACHIEVEMENTS */ .members,.achievements{max-width:600px;margin:auto;} .member,.achievement{border:2px solid red;border-radius:15px;margin:15px 0;box-shadow:0 0 20px red;cursor:pointer;overflow:hidden;transition:0.5s;} .member:hover,.achievement:hover{transform:scale(1.05) rotateZ(-1deg);box-shadow:0 0 50px red,0 0 100px gold;} .member-name,.achievement-name{padding:15px;font-weight:900;background:linear-gradient(45deg,#330000,#660000);position:relative;} .member-name::after,.achievement-name::after{content:'★';position:absolute;right:15px;top:15px;color:gold;animation:spin 3s linear infinite;} .member-details,.achievement-details{display:none;padding:15px;background:#080808;line-height:1.8;font-size:0.95rem;transition:0.5s;} /* RANK BADGES */ .retired{color:#ff5555;font-weight:900;} .lt3{color:#3399ff;font-weight:900;} .lt4{color:#66ccff;font-weight:900;} .lt5{color:#99ddff;font-weight:900;} .ht3{color:#ffaa33;font-weight:900;} .ht4{color:#ffcc33;font-weight:900;} .ht5{color:#ffee33;font-weight:900;} .active{color:#55ff55;font-weight:900;} /* DISCORD */ iframe{border-radius:15px;margin-top:15px;box-shadow:0 0 50px #7289da;transition:0.5s;} /* YOUTUBE */ .youtube-link{display:inline-block;margin-top:20px;box-shadow:0 0 50px red,0 0 100px gold;border-radius:20px;transition:0.5s;} .youtube-link:hover{transform:scale(1.05);box-shadow:0 0 100px gold,0 0 200px red;} /* MUSIC BTN */ .music{position:fixed;bottom:20px;right:20px;background:red;padding:15px;border-radius:50%;cursor:pointer;z-index:10;box-shadow:0 0 30px red;transition:0.3s;} .music:hover{box-shadow:0 0 50px gold;transform:scale(1.2);} /* ANIMATIONS */ @keyframes glow{from{text-shadow:0 0 20px red}to{text-shadow:0 0 60px gold;}} @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}} @media(max-width:600px){.section h1{font-size:2rem} .section h2{font-size:1.5rem}} </style> </head> <body> <canvas id="particles"></canvas> <!-- AUDIO --> <audio id="clickSound"><source src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio> <audio id="bgMusic" loop><source src="https://www.soundjay.com/free-music/midnight-ride.mp3"></audio> <!-- SECTION 1: TOP --> <div class="section" id="top"> <h1>SUPREMES ON TOP ALWAYS</h1> <a href="#members" class="btn" onclick="playClick()">ENTER</a> </div> <!-- SECTION 2: WELCOME --> <div class="section" id="welcome"> <h1>WELCOME TO SUPREMES</h1> <p>Power • Loyalty • Legacy</p> <a href="#members" class="btn" onclick="playClick()">UNLOCK SUPREMES</a> </div> <!-- SECTION 3: MEMBERS --> <div class="section" id="members"> <h1 style="color:red;text-shadow:0 0 40px red;">SUPREMES MEMBERS</h1> <div class="section"> <h2>Founder</h2> <p><strong>Marcos444</strong> aka <strong>RutuRaj</strong></p> </div> <div class="section"> <h2>Helpers</h2> <p>GudduYT, Blush, Viper, Simplelost, Probro, Billa, Cart, Naman, Yatharth <br>and all Supremes Members</p> </div> <div class="members"> <div class="member" onclick="toggle(this)"><div class="member-name">GudduYT</div> <div class="member-details"><span class="retired">NetPot – Retired LT3</span><br><span class="lt4">SmpKit – LT4</span><br><span class="retired">Tank – Retired LT3</span></div></div> <div class="member" onclick="toggle(this)"><div class="member-name">Blush</div> <div class="member-details"><span class="lt5">NetPot – LT5</span><br><span class="lt4">Tank – LT4</span></div></div> <div class="member" onclick="toggle(this)"><div class="member-name">Simplelost</div> <div class="member-details"><span class="lt3">NetPot – LT3</span><br><span class="lt4">DiaSmp – LT4</span><br><span class="lt4">Mace – LT4</span><br><span class="ht5">Crystal – HT5</span><br><span class="lt3">Sword – LT3</span></div></div> <div class="member" onclick="toggle(this)"><div class="member-name">Cart</div> <div class="member-details"><span class="retired">Cart – Retired HT3</span><br><span class="ht4">UHC – HT4</span><br><span class="ht4">NetPot – HT4</span></div></div> </div> <div class="section"> <h2>Supremes Discord (Live)</h2> <iframe src="https://discord.com/widget?id=1313117207328325694&theme=dark" width="300" height="400" frameborder="0" sandbox="allow-popups allow-same-origin allow-scripts"></iframe> <br><br> <a class="btn" href="https://discord.gg/3AZwKuxe2a" target="_blank">JOIN SUPREMES DC</a> </div> </div> <!-- SECTION 4: ACHIEVEMENTS --> <div class="section" id="achievements"> <h1 style="color:gold;text-shadow:0 0 50px gold;">SUPREMES ACHIEVEMENTS</h1> <div class="achievements"> <div class="achievement" onclick="toggle(this)"> <div class="achievement-name">1ST ACHIEVEMENT</div> <div class="achievement-details">Play more than 50-60+ CVC and Gank its total</div> </div> <div class="achievement" onclick="toggle(this)"> <div class="achievement-name">2ND ACHIEVEMENT</div> <div class="achievement-details">First clan who defeated Ignix – Name: Supremes</div> </div> <div class="achievement" onclick="toggle(this)"> <div class="achievement-name">3RD ACHIEVEMENT</div> <div class="achievement-details">Top 1 in Spike MC</div> </div> </div> <h2 style="margin-top:40px;color:cyan;">Watch Supremes Video</h2> <a href="https://youtu.be/IJkPkfMDH0o?si=_jbiqUyltwtu0VBm" target="_blank" class="btn youtube-link">WATCH YOUTUBE VIDEO</a> </div> <!-- MUSIC BUTTON --> <div class="music" onclick="toggleMusic()">🎵</div> <script> // PARTICLES INTERACTIVE const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");canvas.width=window.innerWidth;canvas.height=window.innerHeight; let particlesArray=[],mouse={x:null,y:null}; canvas.addEventListener("mousemove",e=>{mouse.x=e.x;mouse.y=e.y;}); class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*2+1;this.speedX=Math.random()*1-0.5;this.speedY=Math.random()*1-0.5;}update(){this.x+=this.speedX;this.y+=this.speedY;let dx=mouse.x-this.x,dy=mouse.y-this.y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){this.x-=dx/20;this.y-=dy/20;}if(this.x>canvas.width)this.x=0;if(this.x<0)this.x=canvas.width;if(this.y>canvas.height)this.y=0;if(this.y<0)this.y=canvas.height;}draw(){ctx.fillStyle="red";ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();}} function initParticles(){particlesArray=[];for(let i=0;i<120;i++){particlesArray.push(new Particle());}} function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particlesArray.forEach(p=>{p.update();p.draw();});requestAnimationFrame(animateParticles);} initParticles();animateParticles();window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;initParticles();}); // TOGGLE DETAILS function toggle(el){const details=el.querySelector("*[class$='details']");details.style.display=details.style.display==="block"?"none":"block";} // MUSIC let playing=true;const bgMusic=document.getElementById("bgMusic"); function toggleMusic(){playing?bgMusic.play():bgMusic.pause();playing=!playing;} function playClick(){document.getElementById("clickSound").play();} // SECTION FADE IN const sections=document.querySelectorAll('.section'); window.addEventList
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SUPREMES GOD LEVEL ULTIMATE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#ff0000; --gold:#FFD700; --green:#00ff00; --blue:#1E90FF; --dark:#0b0b0b;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Orbitron',sans-serif;background:#010101;color:white;text-align:center;overflow-x:hidden;position:relative;}
+.particles, .streaks{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;}
+.particle{position:absolute;width:5px;height:5px;background:var(--gold);border-radius:50%;opacity:0.7;animation:particleMove 5s linear infinite;}
+@keyframes particleMove{0%{transform:translateY(0) rotate(0deg);}100%{transform:translateY(-110vh) rotate(360deg);}}
+.streak{position:absolute;width:2px;height:80px;background:var(--red);opacity:0.5;animation:streakMove linear infinite;}
+@keyframes streakMove{0%{top:100%;}100%{top:-100%;}}
+.logo{font-size:clamp(36px,8vw,80px); font-weight:900; color:var(--red); text-shadow:0 0 10px var(--red),0 0 30px var(--red),0 0 50px var(--red); margin:20px 0; animation:neonPulse 1.5s infinite alternate, shake 2s infinite;}
+@keyframes neonPulse{from{text-shadow:0 0 20px var(--red),0 0 40px var(--red),0 0 60px var(--red);}to{text-shadow:0 0 50px var(--red),0 0 80px var(--red),0 0 120px var(--red);}}
+@keyframes shake{0%{transform:translateX(0);}25%{transform:translateX(-2px);}50%{transform:translateX(2px);}75%{transform:translateX(-2px);}100%{transform:translateX(0);}}
+nav{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; background:var(--dark); padding:10px; position:sticky; top:0; z-index:999;}
+nav button{background:black;color:var(--red);border:2px solid var(--red);padding:10px 16px;border-radius:12px;font-weight:bold;cursor:pointer;transition:0.3s;animation:navPulse 3s infinite alternate;}
+nav button:hover{background:var(--red);color:black;box-shadow:0 0 15px var(--red);}
+@keyframes navPulse{from{box-shadow:0 0 5px var(--red);}to{box-shadow:0 0 20px var(--red);}}
+section{display:none;padding:20px;animation:fadeIn 0.7s ease;}
+section.active{display:block;}
+.card{background:#0f0f0f;border:1px solid var(--red);border-radius:12px;padding:15px;margin:15px auto;max-width:600px;cursor:pointer;transition:0.3s;animation:cardPulse 3s infinite alternate;}
+.card:hover{box-shadow:0 0 25px var(--red);transform:scale(1.05) rotate(-1deg);}
+@keyframes cardPulse{0%{box-shadow:0 0 5px var(--red);}50%{box-shadow:0 0 20px var(--red);}100%{box-shadow:0 0 5px var(--red);}}
+.details{display:none;font-size:14px;color:#ccc;margin-top:10px;}
+input{padding:12px;width:80%;max-width:300px;border-radius:8px;border:none;text-align:center;}
+.main-btn{margin-top:15px;padding:12px 20px;background:var(--red);color:black;font-weight:bold;border-radius:12px;cursor:pointer;border:none;animation:shake 2s infinite;}
+.music{position:fixed;bottom:15px;right:15px;background:var(--red);color:black;padding:10px 15px;border-radius:30px;font-weight:bold;cursor:pointer;animation:shake 2s infinite;}
+.discord a{display:inline-block;margin-top:20px;background:#5865F2;color:white;padding:12px 20px;border-radius:10px;font-weight:bold;transition:0.3s;animation:discordBounce 2s infinite alternate;}
+.discord a:hover{box-shadow:0 0 20px #5865F2;transform:scale(1.05);}
+
+/* Tier animations RGB */
+@keyframes rainbowActive {0% {color:#ff0000;}16% {color:#ff7f00;}32% {color:#ffff00;}48% {color:#00ff00;}64% {color:#0000ff;}80% {color:#4b0082;}100% {color:#8b00ff;}}
+@keyframes rainbowRetired {0% {color:#888;}50% {color:#bbb;}100% {color:#ccc;}}
+@keyframes rainbowLegend {0% {color:#FFD700;}50% {color:#FF8C00;}100% {color:#FF1493;}}
+.tier-active {animation: rainbowActive 3s infinite alternate; font-weight:bold;}
+.tier-retired {animation: rainbowRetired 3s infinite alternate; font-weight:bold;}
+.tier-legend {animation: rainbowLegend 3s infinite alternate; font-weight:bold; text-shadow:0 0 10px #FFD700,0 0 30px #FFD700;}
+
+.achievement{background:#111;border:1px solid var(--red);padding:15px;margin:10px auto;max-width:500px;border-radius:12px;transition:0.3s;animation:shake 2s infinite;}
+.achievement:hover{box-shadow:0 0 25px var(--gold);transform:scale(1.1);}
+#top h1{font-size:clamp(50px,10vw,120px);color:var(--gold);text-shadow:0 0 10px var(--gold),0 0 30px var(--gold),0 0 50px var(--gold);animation:shake 2s infinite,pulseGold 1.5s infinite alternate;}
+@keyframes pulseGold{0%{text-shadow:0 0 10px var(--gold),0 0 30px var(--gold);}50%{text-shadow:0 0 20px var(--gold),0 0 60px var(--gold);}100%{text-shadow:0 0 10px var(--gold),0 0 30px var(--gold);}}
+</style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+<div class="streaks" id="streaks"></div>
+<div class="logo">SUPREMES</div>
+
+<nav>
+  <button onclick="show('login')">VIP LOGIN</button>
+  <button onclick="show('welcome')">WELCOME</button>
+  <button onclick="show('founder')">FOUNDER</button>
+  <button onclick="show('players')">DETAILS</button>
+  <button onclick="show('active')">SERVER INFO</button>
+  <button onclick="show('achievements')">ACHIEVEMENTS</button>
+  <button onclick="show('top')">SUPREMES ON TOP</button>
+</nav>
+
+<!-- VIP LOGIN -->
+<section id="login" class="active">
+  <h2>VIP LOGIN</h2>
+  <p>Password: <b style="color:red;">SUPREMES</b></p>
+  <input type="password" id="pass" placeholder="Enter Password"><br>
+  <button class="main-btn" onclick="login()">LOGIN</button>
+  <p id="msg"></p>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome">
+  <h2>WELCOME TO SUPREMES</h2>
+  <p style="font-size:18px;">
+    Clan Supremes is a competitive and united clan built on skill, loyalty, and respect.  
+    We aim for excellence in every match, pushing each other to improve while maintaining  
+    a positive and supportive environment. Whether it’s strategic teamwork, clutch plays,  
+    or consistent growth.
+  </p>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <h2>FOUNDER</h2>
+  <p><b class="tier-legend">MARCOS444</b> AKA <b class="tier-legend">RUTURAJ</b></p>
+  <p>CLAN BUILDERS:<br>
+  <span class="tier-active">GUDDU, YATHARTH, SIMPLELOST (CHOTU FLEXY), PROBRO, NAMAN, CART, VIPER, BILLA, BLUSH</span></p>
+</section>
+
+<!-- PLAYERS -->
+<section id="players">
+<h2>CLAN MEMBERS DETAILS</h2>
+
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#FF0000">MARCOS</b><div class="details">UHC LT4<br>NETHPOT HT5</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#FF7F00">GUDDU</b><div class="details">NETHPOT RETIRED LT3 (HT4)<br>TANK RETIRED LT4<br>SMP LT4<br>UHC HT5</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-retired" style="color:#888888">YATHARTH</b><div class="details">RETIRED LT3 (HT4)<br>TANK LT4</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#00FF00">SIMPLELOST</b><div class="details">NETHPOT LT3<br>CRYSTAL HT5<br>UHC LT4<br>MACE LT4<br>DIASMP LT4<br>SWORD LT3</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-retired" style="color:#AAAAAA">PROBRO</b><div class="details">NETHPOT RETIRED LT3 (LT4)<br>UHC HT5</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#00FFFF">NAMAN</b><div class="details">NETHPOT LT4<br>UHC LT4<br>TANK LT4<br>SMP LT4</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#FF00FF">CART</b><div class="details">CART HT3<br>UHC HT4<br>NETHPOT LT4</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#1E90FF">VIPER</b><div class="details">LT4<br>TANK LT4</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#FFFF00">BILLA</b><div class="details">NETHPOT LT4<br>MACE LT4<br>UHC HT5<br>DIASMP LT5<br>CRYSTAL LT4<br>TANK HT5</div></div>
+<div class="card" onclick="toggle(this)"><b class="tier-active" style="color:#FF1493">BLUSH</b><div class="details">NETHPOT LT5<br>TANK LT4</div></div>
+</section>
+
+<!-- SERVER INFO -->
+<section id="active">
+<h2>SERVER INFO</h2>
+<div class="discord">
+<a href="https://discord.gg/nmGqFEKPtf" target="_blank">JOIN SUPREMES DISCORD</a>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+<h2>CLAN ACHIEVEMENTS</h2>
+<div class="achievement">✅ Played more than 40–60+ CVC and Ganks</div>
+<div class="achievement">🏆 First clan who defeated IGNIX - SUPREMES</div>
+<div class="achievement">🥇 Top 1 in SPIKE MC</div>
+<div class="achievement">💥 OWNZ EVERY CRACKED CLAN EVEN JINX, IGNIX, HADES, AND OTHERS</div>
+<p style="margin-top:20px;"><a href="https://youtu.be/IJkPkfMDH0o?si=_jbiqUyltwtu0VBm" target="_blank" style="color: var(--gold); font-weight:bold;">Watch Video on YouTube</a></p>
+</section>
+
+<!-- TOP -->
+<section id="top">
+<h1>SUPREMES ON TOP</h1>
+<p style="font-size:20px;color:var(--red);animation:shake 2s infinite;">EVERYONE LOVES SUPREMES!</p>
+</section>
+
+<audio id="bgm" loop><source src="https://files.catbox.moe/6v9g8b.mp3" type="audio/mpeg"></audio>
+<audio id="topSound"><source src="https://www.myinstants.com/media/sounds/crowd-cheering.mp3" type="audio/mpeg"></audio>
+<div class="music" onclick="music()">MUSIC</div>
+
+<script>
+function show(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  if(id==='top'){document.getElementById("topSound").play();}
+}
+function login(){
+  const p=document.getElementById("pass").value;
+  msg.innerText=p==="SUPREMES"?(show("welcome"),""):"WRONG PASSWORD";
+}
+function toggle(card){const d=card.querySelector(".details");d.style.display=d.style.display==="block"?"none":"block";}
+function music(){const m=document.getElementById("bgm");m.paused?m.play():m.pause();}
+
+const particlesContainer=document.getElementById('particles');
+for(let i=0;i<60;i++){
+  const p=document.createElement('div');p.classList.add('particle');
+  p.style.left=Math.random()*100+'%';
+  p.style.width=p.style.height=(Math.random()*4+2)+'px';
+  p.style.animationDuration=(Math.random()*5+3)+'s';
+  particlesContainer.appendChild(p);
+}
+const streaksContainer=document.getElementById('streaks');
+for(let i=0;i<30;i++){
+  const s=document.createElement('div');s.classList.add('streak');
+  s.style.left=Math.random()*100+'%';
+  s.style.animationDuration=(Math.random()*5+2)+'s';
+  streaksContainer.appendChild(s);
+}
+
+let discordCount = 6;
+function updateDiscordCount(){
+  let f=Math.floor(Math.random()*3);
+  document.getElementById("discordCount").innerText = discordCount + f;
+}
+setInterval(updateDiscordCount,2000);
+updateDiscordCount();
+</script>
+
+</body>
+</html>
